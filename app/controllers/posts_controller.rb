@@ -1,7 +1,11 @@
 class PostsController < ApplicationController
+  def post_params
+    params.require(:post).permit(:title, :description, :posted_on, :place_id)
+  end
+  
+
   def new
-    @post= Post.new
-    @post["place_id"] = params["place_id"]
+    @post= Post.new(post_params)
   end
 
   #This works

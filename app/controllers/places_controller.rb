@@ -7,7 +7,6 @@ class PlacesController < ApplicationController
     @place= Place.new
   end
 
-  #This works
   def create
     @place = Place.new
     @place["name"] = params["place"]["name"]
@@ -16,7 +15,6 @@ class PlacesController < ApplicationController
     redirect_to "/places"
   end
 
-    #This dos not.Isnot grabbing the right place.
   def show
     @place = Place.find_by({ "id" => params["id"] })
     @posts = Post.where({"place_id" => @place["id"]})
