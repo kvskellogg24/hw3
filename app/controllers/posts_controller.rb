@@ -20,7 +20,7 @@ class PostsController < ApplicationController
     @post["place_id"] = params["post"]["place_id"]
     @post.save
     
-    redirect_to "/places/#{@post["place_id"]}" 
+    redirect_to "/places/new/#{@post["place_id"]}" 
   end
 
   def show
