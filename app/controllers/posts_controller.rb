@@ -1,11 +1,10 @@
 class PostsController < ApplicationController
   def post_params
-    params.require(:post).permit(:title, :description, :posted_on, :place_id)
+    #params.require(:post).permit(:title, :description, :posted_on, :place_id)
   end
-  
 
   def new
-    @post= Post.new(post_params)
+    @post = Post.find_by({ "id" => params["place_id"] })
   end
 
   #This works
