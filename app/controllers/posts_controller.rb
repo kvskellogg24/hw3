@@ -19,7 +19,7 @@ class PostsController < ApplicationController
     @post["place_id"] = params["post"]["place_id"]
     @post.save
     
-    redirect_to "/places/#{@post["place_id"]}" #Not redirecting to the proper places page
+    redirect_to "/places/#{@post["place_id"]}" 
   end
 
   def show
