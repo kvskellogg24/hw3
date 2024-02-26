@@ -4,7 +4,9 @@ class PostsController < ApplicationController
   end
 
   def new
-    @post = Post.find_by({ "id" => params["place_id"] })
+    @places = Place.find_by({ "id" => params["place_id"] })
+    # render contacts/new view with new Contact form
+    #@post = Post.find_by({ "id" => params["place_id"] })
   end
 
   #This works
