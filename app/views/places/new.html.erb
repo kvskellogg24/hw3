@@ -1,0 +1,8 @@
+<p>Input a new visit:</p>
+<%= form_with :model => @place do |form| %>
+  <p>
+    <%= form.label "name", "City Name" %>
+    <%= form.text_field "name" %>
+  </p>
+  <%= form.submit %>
+<% end %>

@@ -1,0 +1,16 @@
+<p>Record a new post:</p>
+<%= form_with :model => @post do |form| %>
+  <p>
+    <%= form.label "title", "Post Title" %>
+    <%= form.text_field "title" %>
+    <br>
+    <%= form.label "description", "Post Body" %>
+    <%= form.text_field "description" %>
+    <br>
+    <%= form.label "posted_on", "Date" %>
+    <%= form.date_field "posted_on" %>
+    <br>
+    <%= form.hidden_field "place_id" %>
+  </p>
+  <%= form.submit %>
+<% end %>
